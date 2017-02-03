@@ -2,7 +2,7 @@ const Bob = function() {
 
   this.hey = function(someoneSays){
 
-    typeOfThing = {
+    const TYPE_OF_THING = {
       question: /[^A-Z]\?$|[K|Y]\?$/,
       yell: /[A-Z]{4}|[A-Z|0-9]\!$/,
       nothing: /^\s*$/
@@ -14,9 +14,9 @@ const Bob = function() {
       whatever: "Whatever."
     }
 
-    if(someoneSays.match(typeOfThing.nothing)) return BOB_SAYS.fine
-    if(someoneSays.match(typeOfThing.yell)) return BOB_SAYS.whoa
-    if(someoneSays.match(typeOfThing.question)) return BOB_SAYS.sure
+    if(someoneSays.match(TYPE_OF_THING.nothing)) return BOB_SAYS.fine
+    if(someoneSays.match(TYPE_OF_THING.yell)) return BOB_SAYS.whoa
+    if(someoneSays.match(TYPE_OF_THING.question)) return BOB_SAYS.sure
     if(!someoneSays) return BOB_SAYS.whatever
     return BOB_SAYS.whatever
   }
