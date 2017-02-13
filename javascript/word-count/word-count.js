@@ -1,11 +1,13 @@
 const Words = function() {
   this.count = function(string){
-    let wordCount = new Object(null)
-    console.log(wordCount)
-    let stringArr = string.toLowerCase().split(/[^\w']+/g).filter(f => f != '')
-    console.log(stringArr)
+    
+    //variables
+    let wordCount = new Object(null),
+        regex = /[^\w']+/g,
+        stringArr = string.toLowerCase().split(regex).filter(f => f != '')
+
+    //work
     stringArr.forEach(word => {
-      console.log(wordCount[word])
       if(wordCount[word] === constructor){
         word.toString()
         wordCount[word]++
@@ -18,6 +20,6 @@ const Words = function() {
 }
 
 // let words = new Words()
-// words.count('reserved words like constructor and toString ok?')
+// words.count('hello  world')
 
 module.exports = Words
